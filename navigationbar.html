@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       
+        <title>First Try</title>
+</head>
+<body>
+        <header>
+            <nav class="navbar">
+                <div class="nav-branding">
+                    <img src="img/logo2.svg"  class="logo-img">
+                </div>
+        
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#section1" class="nav-link">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#section2" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#section3" class="nav-link">Contact</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="#section4" class="nav-link">Contact</a>
+                    </li> -->
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+              </nav> 
+        </header>
+      <div id="section1">
+        <div class="container">
+            <div class="gallery">
+                <figure class="gallery__item gallery__item--1">
+                    <img src="img/g1.png" alt="Gallery image 1" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--2">
+                    <img src="img/g2.png" alt="Gallery image 2" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--3">
+                    <img src="img/g3.png" alt="Gallery image 3" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--4">
+                    <img src="img/g4.png" alt="Gallery image 4" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--5">
+                    <img src="img/g5.png" alt="Gallery image 5" class="gallery__img">
+                </figure>
+               
+            </div>
+        </div>
+      </div>
+      <div id="section2">
+        <div class="about-data">
+            <h1 class="about-title">Lorem Ipsum</h1>
+            <span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+            <a href="" class="button">Contact Me</a>
+        </div>
+      </div>
+      <div id="section3">
+        <form action="">
+            <div class="title">
+              <h2>CONTACT</h2>
+            </div>
+            <div class="half">
+              <div class="item">
+                <label for="name">NAME</label>
+                <input type="text" id = "name">
+              </div>
+              <div class="item">
+                <label for="email">EMAIL</label>
+                <input type="text" id = "email">
+              </div>
+            </div>
+            <div class="full">
+              <label for="message">MESSAGE</label>
+              <textarea name="" id = "message"></textarea>
+            </div>
+            <div class="action">
+              <input type="submit" value = "SEND MESSAGE">
+              <input type="reset" value = "RESET">
+            </div>
+            <div class="icons">
+              <a href="" class = "fa fa-twitter"></a>
+              <a href="" class = "fa fa-facebook"></a>
+              <a href="" class = "fa fa-instagram"></a>
+              <a href="" class = "fa fa-github"></a>
+            </div>
+          </form>
+      </div>
+
+       
+        
+</body>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () =>{
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        })
+
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () =>{
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+    }))
+    </script>
+</html>
